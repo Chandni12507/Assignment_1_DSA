@@ -3,9 +3,11 @@
 
 int main()
 {
-    int n , m=0;
-    n= rand()%5289 + 950383082;
-    printf("%d", &n);
+    int long long n= 0, a=0;
+    int base_value=0 , max=0 , m=0; 
+    n= rand()%5000000000 + 5000000000;
+    int num = n;
+    printf("%lld \t", n);
     while(n>0)
     {
         a = n%10;
@@ -16,5 +18,7 @@ int main()
         }
         a=m;
     }
-    printf("Highest value: %d",&max);
+    printf("Highest value: %lld \t",max);
+    base_value = max+1;
+    printf("Hightest base of %lld is %lld" ,num, base_value);
 }
