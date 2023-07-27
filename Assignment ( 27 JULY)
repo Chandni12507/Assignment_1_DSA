@@ -6,7 +6,8 @@ int base_value(int);               // func defination
 
 int base_value(int n)              // func declaraction
 {
-    int n, m = 0 , max=0 , a=0;  
+    size_t n;
+    int  m = 0 , max=0 , a=0;  
     while(n>0)
     {
         a = n% 10;                  //modulas of number
@@ -15,6 +16,7 @@ int base_value(int n)              // func declaraction
         {
             max = a;
         }
+        m = a;
         base_value = max + 1;               //highest base of number
         return base_value;
     }
@@ -22,11 +24,14 @@ int base_value(int n)              // func declaraction
 }
 int main()
 {
+    size_t n;
     for(int i=0 ; i<50 ; i++)
     {
         arr[i] = rand()%5000000000 + 5000000000;         //input of random integers
     }
     printf("%d" , arr[i]);
-    base_value(n)                            //base_value func calling
+    size_t n = arr[i];          // 'n' is element of array
+           base_value(n)  ;                          //base_value func calling
+    printf("%d" , base_value);
 }
    
