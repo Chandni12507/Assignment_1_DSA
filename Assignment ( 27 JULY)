@@ -2,31 +2,41 @@
 #include<stdlib.h>
 
 size_t arr[50];
+size_t max_arr[50];
 int base_value(int);               // func defination
 
-int base_value(int n)              // func declaraction
+int base_value(size_t arr[i])              // func declaraction
 {
-    int n, m = 0 , max=0 , a=0;  
-    while(n>0)
+    size_t n = arr[i];
+    int m = 0 , max=0 , a=0;  
+    for(int i=0 ; i <50 ; i++)
     {
-        a = n% 10;                  //modulas of number
-        n = n/10;
-        if(a>m)
+        while(n>0)
         {
-            max = a;
+            a = n% 10;                  //modulas of number
+            n = n/10;
+            if(a>m)
+            {
+                max = a;
+            }
+            m = a;
+            base_value = max + 1;               //highest base of number
+            return base_value;
         }
-        base_value = max + 1;               //highest base of number
-        return base_value;
+        max_arr[i] = base_value;
+        printf("%d", max_arr[i]);   
     }
     
 }
 int main()
 {
+    size_t n;
     for(int i=0 ; i<50 ; i++)
     {
         arr[i] = rand()%5000000000 + 5000000000;         //input of random integers
     }
     printf("%d" , arr[i]);         // Printing array of random values
-    base_value(n)                            //base_value func calling
+    base_value(arr[i]);                            //base_value func calling
+    
 }
    
