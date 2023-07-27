@@ -26,7 +26,7 @@ int main()
     {
         arr[i] = rand()%5000000000 + 5000000000;         //input of random integers
     }
-    printf("%d" , arr[i]);
+    printf("%d" , arr[i]);         // Printing array of random values
     base_value(n)                            //base_value func calling
 }
    
